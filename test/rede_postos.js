@@ -2,14 +2,6 @@ const RedePostos = artifacts.require("RedePostos");
 
 contract("RedePostos", function (accounts) {
   it("should return correct test", async function () {
-    /*RedePostos.deployed().then(function(contract){
-        assert.isTrue(false);
-        return contract.Testando.call();
-    }).then(function(result){
-        assert.isTrue(false);
-        //console.log(result);
-    })*/
-
     const deployed = await RedePostos.deployed();
     
     const enderecoOwner = accounts[0];
