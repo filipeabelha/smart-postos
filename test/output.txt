@@ -1,0 +1,83 @@
+$ sudo truffle migrate && sudo truffle test
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/RedePostos.sol
+> Artifacts written to /home/filipe/smart-postos/build/contracts
+> Compiled successfully using:
+   - solc: 0.8.17+commit.8df45f5f.Emscripten.clang
+Network up to date.
+Using network 'development'.
+
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+  Contract: RedePostos
+    1) should emit correct events
+
+    Events emitted during test:
+    ---------------------------
+
+    RedePostos.NovoSaldo(
+      destinatario: 0xA4C4125af26351264d9C0E41745c03b1fEB70899 (type: address),
+      quantidade: 10000 (type: uint256)
+    )
+
+    RedePostos.NovoSaldo(
+      destinatario: 0x840564B625B90aF23ADC48d128d00a788361ed85 (type: address),
+      quantidade: 10000 (type: uint256)
+    )
+
+    RedePostos.NovoIdDePosto(
+      id: 1 (type: uint256)
+    )
+
+    RedePostos.NovoIdDePosto(
+      id: 2 (type: uint256)
+    )
+
+    RedePostos.NovoIdDePosto(
+      id: 3 (type: uint256)
+    )
+
+    RedePostos.MelhorOfertaEncontrada(
+      enderecoCliente: 0x840564B625B90aF23ADC48d128d00a788361ed85 (type: address),
+      idMelhorPosto: 3 (type: uint256),
+      melhorValor: 5 (type: uint256),
+      enderecoPosto: 0xA4C4125af26351264d9C0E41745c03b1fEB70899 (type: address)
+    )
+
+    RedePostos.AbastecimentoLiberado(
+      enderecoPosto: 0xA4C4125af26351264d9C0E41745c03b1fEB70899 (type: address),
+      quantidadeLiberada: 20 (type: uint256),
+      valorTotal: 100 (type: uint256)
+    )
+
+    RedePostos.NovoSaldo(
+      destinatario: 0x840564B625B90aF23ADC48d128d00a788361ed85 (type: address),
+      quantidade: 9900 (type: uint256)
+    )
+
+    RedePostos.NovoSaldo(
+      destinatario: 0xA4C4125af26351264d9C0E41745c03b1fEB70899 (type: address),
+      quantidade: 10100 (type: uint256)
+    )
+
+
+    ---------------------------
+
+
+  0 passing (14s)
+  1 failing
+
+  1) Contract: RedePostos
+       should return correct test:
+     ReferenceError: assertTrue is not defined
+      at Context.<anonymous> (/home/filipe/smart-postos/test/rede_postos.js:26:5)
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+
+
+
