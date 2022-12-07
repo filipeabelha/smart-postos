@@ -29,6 +29,10 @@ contract RedePostos {
       criador = msg.sender;
   }
 
+  function digaOla() public pure returns (string memory) {
+      return "Ola, mundo!";
+  }
+
   function adicionarSaldo(address destinatario, uint quantidade) public {
       require(msg.sender == criador, "apenas criador");
       saldos[destinatario] += quantidade;
